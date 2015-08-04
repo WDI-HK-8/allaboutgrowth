@@ -4,8 +4,10 @@
   <title>AllAboutGrowth</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="public/application.js"></script>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href = "/public/custom.css">
 
 </head>
 <body>
@@ -58,13 +60,23 @@
       <h1>All About Growth</h1>
     </div>
     <div class="signUp">
-      <span id="signUpUserName">UserName</span>
-      <input type="text" class="form-control" placeholder="Username" aria-describedby="signUpUserName">
+      <h3>Sign Up</h3>
+      <span id="signUpUsername">UserName</span>
+      <input type="text" class="form-control" placeholder="Username" aria-describedby="signUpUsername" id="username">
       <span id="signUpEmail">Email</span>
-      <input type="text" class="form-control" placeholder="Input email" aria-describedby="signUpEmail">
+      <input type="text" class="form-control" placeholder="Input email" aria-describedby="signUpEmail" id="email">
       <span id="signUpPassword">Password</span>
-      <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signUpPassword">
+      <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signUpPassword" id="password">
       <button class="btn btn-success col-xs-12" type="button" id="signUpSubmit">Sign Up</button>
+    </div>
+
+    <div class="signIn">
+      <h3>Sign in</h3>
+      <span id="signInUsername">UserName</span>
+      <input type="text" class="form-control" placeholder="Username" aria-describedby="signInUsername">
+      <span id="signInPassword">Password</span>
+      <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signInPassword">
+      <button class="btn btn-success col-xs-12" type="button" id="signInSubmit">Sign In</button>
     </div>
 
   </div>

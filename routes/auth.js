@@ -1,10 +1,10 @@
 module.exports = {};
-// module.export === Auth
-
 // Auth.authenticated = ...
 module.exports.authenticated = function(request, callback) {
   // 1. retrieve session_id from cookie
   var session = request.session.get('allaboutgrowth_session');
+  //var session_id = cookie.session_id;
+
   var message = "Unauthorized access detected. Computer will self-destruct in T-5 seconds."
   var db = request.server.plugins['hapi-mongodb'].db;
 
@@ -20,4 +20,9 @@ module.exports.authenticated = function(request, callback) {
     }
     callback({authenticated: true, user_id: session.user_id});
   });
+};
+
+exports.register.attributes = {
+  name: 'auth-route',
+  version: '0.0.1'
 };

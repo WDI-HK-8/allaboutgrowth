@@ -2,11 +2,12 @@ $(document).ready(function(){
 
   $('#signUpSubmit').click(function(){
     event.preventDefault();
+    console.log('hello');
+    var email = $('.signUp > input[id="email"]');
+    var username = $('.signUp > input[id="username"]');
+    var password = $('.signUp > input[id="password"]');
 
-    var email = $('#signUp > input[id="signUpEmail"]');
-    var username = $('#signUp > input[id="signUpUsername"]');
-    var password = $('#signUp > input[id="signUpPassword"]');
-
+    debugger
     $.ajax({
       type: 'POST',
       url: '/users',
