@@ -1,0 +1,34 @@
+var diff = fs - hs; 
+var j =0;
+
+function playnum() {
+    for (var i = 0; i<50; i++) {
+        rnum[i] = Math.floor((Math.random() * 10) + 1);
+        fm[i]= rnum[i];
+        hm[i]= rnum[i];
+        round ++;
+        While (j<5); {
+            if (rnum[i] == fm[j]) {
+                fs++;
+            }
+            if (rnum[i] == hm[j]) {
+                hs++;
+            }
+            j ++;
+        }
+        While (j<5); {
+            if (rnum[i] == fm[j]) {
+                J++;
+            } else {
+                if (fm.length >5){
+                    fm = fm.splice(j, 1);
+                }
+            j++;
+        }
+        if (hm.length >5){
+            hm = hm.shift();
+        }
+    }
+}
+
+console.log(diff);
