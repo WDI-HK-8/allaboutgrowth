@@ -2,10 +2,10 @@ $(document).ready(function(){
 
   $('#signUpSubmit').click(function(){
     event.preventDefault();
-
-    var email = $('#signUp > input[id="signUpEmail"]');
-    var username = $('#signUp > input[id="signUpUsername"]');
-    var password = $('#signUp > input[id="signUpPassword"]');
+    console.log('hello signup');
+    var email = $('.signUp > input[id="email"]');
+    var username = $('.signUp > input[id="username"]');
+    var password = $('.signUp > input[id="password"]');
 
     $.ajax({
       type: 'POST',
@@ -24,5 +24,26 @@ $(document).ready(function(){
     });
   });
 
+  $('#signInSubmit').click(function(){
+    event.preventDefault();
+    console.log('hello signin');
+    var username = $('.signIn > input[id="siusername"]');
+    var password = $('.signIn > input[id="sipassword"]');
+
+    $.ajax({
+      type: 'POST',
+      url: '/sessions',
+      data: {
+        user: {
+          username: username.val(),
+          password: password.val()
+        }
+      },
+      dataType: 'JSON',
+      success: function(response){
+        console.log(response);
+      }
+    });
+  });
 
 });

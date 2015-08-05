@@ -18,7 +18,7 @@ server.connection({
 // Require MongoDB
 var plugins = [
   { register: require('./routes/users.js')},
-  //{ register: require('./routes/sessions.js')},  
+  { register: require('./routes/sessions.js')},  
   { register: require('./routes/static-pages.js')},
   { register: require('hapi-mongodb'),
     options: {
