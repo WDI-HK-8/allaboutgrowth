@@ -7,13 +7,13 @@ module.exports.authenticated = function(request, callback) {
 
   var message = "Unauthorized access detected. Computer will self-destruct in T-5 seconds."
   var db = request.server.plugins['hapi-mongodb'].db;
-
+  var session_id = session.session_id;
   if (!session) {
     return callback({authenticated: false, message: message});
   }
 
   // 2. look into the DB to find matching session)id
-  db.collection('sessions').findOne({ "session_id": session.session_id }, function(err, session) {
+  db.collection('sessions').findOne({ session_id: session_id }, function(err, session) {
     // 3. return true/false
     if (!session) {
       return callback({authenticated: false, message: message});
@@ -22,7 +22,3 @@ module.exports.authenticated = function(request, callback) {
   });
 };
 
-exports.register.attributes = {
-  name: 'auth-route',
-  version: '0.0.1'
-};

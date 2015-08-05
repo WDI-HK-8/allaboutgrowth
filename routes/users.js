@@ -13,6 +13,7 @@ exports.register = function(server, options, next){
           var db = request.server.plugins['hapi-mongodb'].db;
 
           // Get user input parameters (username, email, password)
+          //var user = request.payload.user;
           var user = {
             username: request.payload.user.username,
             email:    request.payload.user.email,

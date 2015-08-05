@@ -1,6 +1,6 @@
 var Joi = require('joi');
 var Bcrypt = require('bcrypt');
-var Auth = {};
+var Auth = require('./auth');
 
 exports.register = function(server, options, next) {
   server.route([
@@ -36,7 +36,7 @@ exports.register = function(server, options, next) {
                   return reply('internal MongoDB error, error');
                 }
                 // store session in browser cookie ? what's message?  
-                return reply ({'message:':Authenticated});
+                return reply ({'message:':"Authenticated"});
               });
             } else {
               reply({message: "Not authroized"});
