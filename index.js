@@ -3,6 +3,8 @@ var Hapi = require('hapi');
 var Path = require('path');
 var server = new Hapi.Server();
 
+
+
 // Configure server connections
 server.connection({
   host: '0.0.0.0',
@@ -35,7 +37,7 @@ var plugins = [
     options: {
       cookieOptions: {
         password: process.env.COOKIE_PASSWORD || 'timtimtim',
-        isSecure: true // we are not going to https, yet, for development
+        isSecure: false // we are not going to https, yet, for development
       }
     }
   }
