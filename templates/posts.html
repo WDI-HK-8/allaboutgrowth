@@ -59,25 +59,23 @@
     <div class='row'>
       <h1>All About Growth</h1>
     </div>
-    <div class="signUp">
-      <h3>Sign Up</h3>
-      <span id="signUpUsername">UserName</span>
-      <input type="text" class="form-control" placeholder="Username" aria-describedby="signUpUsername" id="username">
-      <span id="signUpEmail">Email</span>
-      <input type="text" class="form-control" placeholder="Input email" aria-describedby="signUpEmail" id="email">
-      <span id="signUpPassword">Password</span>
-      <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signUpPassword" id="password">
-      <button class="btn btn-success col-xs-12" type="button" id="signUpSubmit">Sign Up</button>
+
+    <div class="container">
+      <div class="row">
+        <div id="post">
+          <div class="input-group">
+            <input type="text" name="message" id="postSubmit" class="form-control" placeholder="Write your post!">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" id="submitPost" type="button">Submit!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <h3>Posts</h3>
+      <div id="posts" class="col-xs-12">
+      </div>
     </div>
 
-    <div class="signIn">
-      <h3>Sign In</h3>
-      <span id="signInUsername">UserName</span>
-      <input type="text" class="form-control" placeholder="Username" aria-describedby="signInUsername" id="siusername">
-      <span id="signInPassword">Password</span>
-      <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signInPassword" id="sipassword">
-      <button class="btn btn-success col-xs-12" type="button" id="signInSubmit">Sign In</button>
-    </div>
 
     <div class="signOut">
       <h3>Sign Out</h3>

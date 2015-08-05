@@ -46,4 +46,22 @@ $(document).ready(function(){
     });
   });
 
+  $('#signOut').click(function(){
+    event.preventDefault();
+    console.log('hello signout');
+
+    $.ajax({
+      type: 'DELETE',
+      url: '/sessions',
+      dataType: 'JSON',
+      success: function(response){
+        console.log(response);
+        // this.checkLogin();
+      },
+      error: function(response) {
+        console.log(response);
+      }
+    });
+  });
+
 });
