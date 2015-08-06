@@ -29,7 +29,7 @@ exports.register = function(server, options, next) {
               var randomKey = randomKeyGenerator();
 
               var newSession = { session_id: randomKey, user_id: userMongo._id };
-
+              // whats userMongo._id
               db.collection('sessions').insert(newSession, function(err, result){
                 if (err) { return reply('internal MongoDB error, error'); }
                 
