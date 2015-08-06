@@ -12,13 +12,6 @@ exports.register = function(server, options, next){
           var db   = request.server.plugins['hapi-mongodb'].db;
           // Get user input parameters (username, email, password)
           var user = request.payload.user;
-          // var user = {
-          //   username: request.payload.user.username,
-          //   email:    request.payload.user.email,
-          //   password: request.payload.user.password,
-          //   bio: request.payload.user.bio,
-          //   profilepic: request.payload.user.profilepic
-          // };
           // Check if there is an existing user with the same username or the same email address
           var uniqUserQuery = { 
             $or: [

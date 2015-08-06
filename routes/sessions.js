@@ -58,7 +58,6 @@ exports.register = function(server, options, next) {
           }
           db.collection('sessions').remove({ "session_id": session.session_id }, function(err, writeResult) {
             if (err) { return reply('Internal MongoDB error', err); }
-            // whats writeresult
             reply(writeResult);
           });
         })

@@ -4,13 +4,13 @@
   <title>AllAboutGrowth</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
   <script type="text/javascript" src="public/application.js"></script>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href = "/public/custom.css">
 
 </head>
 <body>
+
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,8 +27,6 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -49,40 +47,41 @@
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
+          <li><a href="/userPosts">Create and Read Posts Here</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  
+
+
   <div class='container'>
-    <div class='row'>
-      <h1>All About Growth</h1>
-      </div>
-      
+    <div class='row'>      
       <div class ="account" col-xs-4>
         <div class="signUp">
-          <h3>Sign Up</h3>
-          <span id="signUpUsername">UserName</span>
+          <h3>Sign up to read post about "growth"</h3>
+          <span id="signUpUsername"></span>
           <input type="text" class="form-control" placeholder="Username" aria-describedby="signUpUsername" id="username">
-          <span id="signUpEmail">Email</span>
+          <span id="signUpEmail"></span>
           <input type="text" class="form-control" placeholder="Input email" aria-describedby="signUpEmail" id="email">
-          <span id="signUpPassword">Password</span>
+          <span id="signUpPassword"></span>
           <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signUpPassword" id="password">
           <button class="btn btn-success col-xs-12" type="button" id="signUpSubmit">Sign Up</button>
+          <br>
         </div>
 
         <div class="signIn">
-          <h3>Sign In</h3>
-          <span id="signInUsername">UserName</span>
+          <h3>Sign in here</h3>
+          <span id="signInUsername"></span>
           <input type="text" class="form-control" placeholder="Username" aria-describedby="signInUsername" id="siusername">
-          <span id="signInPassword">Password</span>
+          <span id="signInPassword"></span>
           <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signInPassword" id="sipassword">
           <button class="btn btn-success col-xs-12" type="button" id="signInSubmit">Sign In</button>
+          <br>
+          <br>
         </div>
 
         <div class="signOut">
-          <h3>Sign Out</h3>
+          <h3>Sign out, I hate "growth"</h3>
           <button class="btn btn-success col-xs-12" type="button" id="signOut">Sign Out</button>
         </div>
       </div>

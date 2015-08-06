@@ -71,7 +71,6 @@ exports.register = function(server, options, next){
       path: '/posts/{id}',
       handler: function(request, reply){
         var post_id  = encodeURIComponent(request.params.id);
-        // .id retrieve from path , path from window's browser url? 
         var db       = request.server.plugins['hapi-mongodb'].db;
         var ObjectId = request.server.plugins['hapi-mongodb'].ObjectID; 
         db.collection('posts').findOne({_id: ObjectId(post_id)}, function(err,post){
@@ -88,6 +87,7 @@ exports.register.attributes = {
   name: 'posts-routes',
   version: '0.0.1'
 }
+    // To be implemented
     // {
     //   // Retrieve all posts by a specific user
     //   method: 'GET',
