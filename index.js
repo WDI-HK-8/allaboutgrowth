@@ -3,6 +3,8 @@ var Hapi = require('hapi');
 var Path = require('path');
 var server = new Hapi.Server();
 
+
+
 // Configure server connections
 server.connection({
   host: '0.0.0.0',
@@ -18,6 +20,7 @@ server.connection({
 // Require MongoDB
 var plugins = [
   { register: require('./routes/users.js')},
+  { register: require('./routes/posts.js')},
   { register: require('./routes/sessions.js')},  
   { register: require('./routes/static-pages.js')},
   { register: require('hapi-mongodb'),
@@ -35,7 +38,7 @@ var plugins = [
     options: {
       cookieOptions: {
         password: process.env.COOKIE_PASSWORD || 'timtimtim',
-        isSecure: true // we are not going to https, yet, for development
+        isSecure: false // we are not going to https, yet, for development
       }
     }
   }

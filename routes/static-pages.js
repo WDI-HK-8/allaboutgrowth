@@ -9,6 +9,14 @@ exports. register = function(server, options, next) {
       }
     },
     {
+      //Retrieve all users 
+      method: 'GET',
+      path: '/userPosts', // web url
+      handler: function(request,reply) {
+        reply.view('posts'); // link to posts.html
+      }
+    },
+    {
       method: 'GET',
       path: '/public/{path*}',
       // application.js & css.js

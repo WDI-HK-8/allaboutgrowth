@@ -5,12 +5,12 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="public/application.js"></script>
+  <script type="text/javascript" src="public/post-client.js"></script>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href = "/public/custom.css">
 
 </head>
 <body>
-
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,43 +52,41 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
-
+  
   <div class='container'>
-    <div class='row'>      
-      <div class ="account" col-xs-4>
-        <div class="signUp">
-          <h3>Sign up to read post about "growth"</h3>
-          <span id="signUpUsername"></span>
-          <input type="text" class="form-control" placeholder="Username" aria-describedby="signUpUsername" id="username">
-          <span id="signUpEmail"></span>
-          <input type="text" class="form-control" placeholder="Input email" aria-describedby="signUpEmail" id="email">
-          <span id="signUpPassword"></span>
-          <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signUpPassword" id="password">
-          <button class="btn btn-success col-xs-12" type="button" id="signUpSubmit">Sign Up</button>
-          <br>
-        </div>
+    <div class='row'>
+      <h1>Create your post</h1>
+    </div>
 
-        <div class="signIn">
-          <h3>Sign in here</h3>
-          <span id="signInUsername"></span>
-          <input type="text" class="form-control" placeholder="Username" aria-describedby="signInUsername" id="siusername">
-          <span id="signInPassword"></span>
-          <input type="text" class="form-control" placeholder="Input Password" aria-describedby="signInPassword" id="sipassword">
-          <button class="btn btn-success col-xs-12" type="button" id="signInSubmit">Sign In</button>
-          <br>
-          <br>
-        </div>
-
-        <div class="signOut">
-          <h3>Sign out, I hate "growth"</h3>
-          <button class="btn btn-success col-xs-12" type="button" id="signOut">Sign Out</button>
+    <div class="container">
+      <div class="row">
+        <div id="addPost">
+          <div class="input-group">
+            <input type="text" name="title" id="addTitle" class="form-control" placeholder="Post's title">
+            <br>
+            <input type="text" name="content" id="addContent" class="form-control" placeholder="Post's Content">
+            <br>
+            <input type="text" name="category" id="addCategory" class="form-control" placeholder="Post's category">
+            <br>
+            <input type="text" name="photo" id="addPhoto" class="form-control" placeholder="Add your photo url">
+            <span class="input-group-btn">
+            <br>
+          </div>
+          <button class="btn btn-primary" id="addPost" type="button">Submit!</button>
         </div>
       </div>
+      <h1>Yo, start reading !</h1>
+      <div id="posts" class="col-xs-12">
+      </div>
     </div>
+
+
+
+    <div class="signOut">
+      <button class="btn btn-success col-xs-12" type="button" id="signOut">Sign Out</button>
+    </div>
+
   </div>
-
-
 
 </body>
 </html>
