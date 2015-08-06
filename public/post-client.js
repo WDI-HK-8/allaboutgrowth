@@ -7,6 +7,7 @@ $(document).ready(function(){
   };
 
   Post.prototype.showAllPosts = function(){
+    console.log('showAllPosts called');
     $.ajax({
       context: this,
       type: 'GET',
@@ -21,11 +22,14 @@ $(document).ready(function(){
           html +=       post.title;
           html +=     '</h3>';
           html +=     '<img src ="'+ post.photo + '" class ="img-responsive">'
-          html +=     '<p> post.content </p>'
-          html +=     '<p> post.category </p>'
+          html +=     '<h3 class="list-group-item-heading">';
+          html +=       post.content;
+          html +=     '</h3>';
+          html +=     '<h3 class="list-group-item-heading">';
+          html +=       post.category;
+          html +=     '</h3>';
           html +=     '<p class="list-group-item-text"> by '
-          // html +=       post.username;
-          // html +=       post.user_id;
+          html +=       post.username;
           html +=     '</p>';
           html +=   '</a>';
           html += '</div>';
@@ -51,7 +55,7 @@ $(document).ready(function(){
           'category': this.category,
           'photo': this.photo,
         }
-      }
+      },
       success: function(response){
         console.log("post added", response)
       },
@@ -61,16 +65,16 @@ $(document).ready(function(){
     });  
     post.showAllPosts(); 
   }
-
+  
   var post = new Post();
   post.showAllPosts();
 
   $('#addPost').click(function(){
     event.preventDefault();
-      post.title = $('#addTitle').val();
-      post.content = $('#addContent').val();
+      post.title    = $('#addTitle').val();
+      post.content  = $('#addContent').val();
       post.category = $('#addCategory').val();
-      post.photo = $('#addPhoto').val();
+      post.photo    = $('#addPhoto').val();
 
     post.addPost();
   });

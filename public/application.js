@@ -24,7 +24,7 @@ $(document).ready(function(){
     $('#signUpSubmit').click(function(){
       event.preventDefault();
       console.log('hello signup');
-      var email = $('.signUp > input[id="email"]');
+      var email    = $('.signUp > input[id="email"]');
       var username = $('.signUp > input[id="username"]');
       var password = $('.signUp > input[id="password"]');
 
@@ -69,7 +69,7 @@ $(document).ready(function(){
   $('#signUpSubmit').click(function(){
     event.preventDefault();
     console.log('hello signup');
-    var email = $('.signUp > input[id="email"]');
+    var email    = $('.signUp > input[id="email"]');
     var username = $('.signUp > input[id="username"]');
     var password = $('.signUp > input[id="password"]');
 
@@ -83,6 +83,11 @@ $(document).ready(function(){
     var password = $('.signIn > input[id="sipassword"]');
 
     account.signIn(username,password);
+    
+    // $.ajax({
+    //   type: 'GET',
+    //   url: '/userPosts',
+    // })
   });
 
   $('#signOut').click(function(){
@@ -91,6 +96,8 @@ $(document).ready(function(){
 
     account.signOut();
   });
+
+});
   // $('#signUpSubmit').click(function(){
   //   event.preventDefault();
   //   console.log('hello signup');
@@ -157,4 +164,3 @@ $(document).ready(function(){
   //   });
   // });
 
-});
